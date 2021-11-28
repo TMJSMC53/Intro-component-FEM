@@ -7,6 +7,9 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +17,8 @@
 
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="styles.css">
+
+  <script defer src="app.js"></script>
 
   <title>Frontend Mentor | Intro component with sign up form</title>
 
@@ -31,10 +36,13 @@
 </head>
 
 <body>
+
   <div class="container">
+
     <header class="header">
       <h1 class="header__text">Learn to code by watching others</h1>
-      <p class="header__desc">See how experienced developers solve problems in real-time. Watching scripted tutorials is
+      <p class="header__desc">See how experienced developers solve problems in real-time. Watching scripted tutorials
+        is
         great,
         but understanding how developers think is invaluable.
       </p>
@@ -43,33 +51,62 @@
       <section class="product">
         <!-- product pricing -->
         <article class="product__pricing">
-          <a href="#" class="product-btn">Try it free 7 days then $20/mo. thereafter</a>
+          <a id="product-btn" href="#" class="product-btn"><strong> Try it free 7 days</strong> then $20/mo.
+            thereafter</a>
         </article>
         <!-- end of product pricing -->
         <!-- input container -->
-        <form class="input-container">
-          <label for="name">
-            <input class="input" type="text" name="text" placeholder="First Name" required>
-            <img class="error-icon" src="images/icon-error.svg" alt="error icon">
-          </label>
-          <label for="name">
-            <input class="input" type="text" name="text" placeholder="Last Name">
-            <img class="error-icon" src="images/icon-error.svg" alt="error icon">
-          </label>
-          <label for="name">
-            <input class="input" type="email" name="email" placeholder="Email Address">
-            <img class="error-icon" src="images/icon-error.svg" alt="error icon">
-          </label>
-          <label for="name">
-            <input class="input" type="password" name="password" placeholder="Password">
-            <img class="error-icon" src="images/icon-error.svg" alt="error icon">
-          </label>
+        <form id="form" class="form" novalidate>
 
-          <button class="input-btn">Claim your free trial</button>
-          <p class="terms">By clicking the button, you are agreeing to our <span class="accent">Terms and
+          <div class="form-control">
+            <!-- First Name input -->
+            <label for="firstname"></label>
+            <input id="first-name" type="text" name="firstname" placeholder="First Name">
+
+
+            <img src="images/icon-error.svg" alt="error icon">
+
+            <i class="far fa-check-circle success-icon"></i>
+            <div class="error-msg"></div>
+          </div>
+          <div class="form-control">
+            <!-- Last Name input -->
+            <label for="lastname"></label>
+            <input id="last-name" type="text" name="lastname" placeholder="Last Name">
+            <div class="error-icon">
+              <img src="images/icon-error.svg" alt="error icon">
+            </div>
+            <i class="far fa-check-circle success-icon"></i>
+            <div class="error-msg"></div>
+          </div>
+          <div class="form-control">
+            <!-- Email input -->
+            <label for="email"></label>
+            <input id="email" type="email" name="email" placeholder="Email Address">
+            <div class="error-icon">
+              <img src="images/icon-error.svg" alt="error icon">
+            </div>
+            <i class="far fa-check-circle success-icon"></i>
+            <div class="error-msg"></div>
+            <div class="email-example"></div>
+          </div>
+          <div class="form-control">
+            <!-- Password input -->
+            <label for="password"></label>
+            <input id="password" type="password" name="password" placeholder="Password">
+            <div class="error-icon">
+              <img src="images/icon-error.svg" alt="error icon" required>
+            </div>
+            <i class="far fa-check-circle success-icon"></i>
+            <div class="error-msg"></div>
+          </div>
+          <button class="submit-btn" type="submit">Claim your free trial</button>
+
+          <p class="terms__text">By clicking the button, you are agreeing to our <span class="terms-accent">Terms and
               Services</span></p>
-        </form>
 
+        </form>
+        <!-- input container -->
       </section>
     </main>
   </div>

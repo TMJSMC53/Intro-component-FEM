@@ -27,7 +27,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here]([![Netlify Status](https://api.netlify.com/api/v1/badges/4674f3bc-f71f-4354-9c10-f4dd428fbfe2/deploy-status)](https://app.netlify.com/sites/form-validation-signup/deploys))
+- Live Site URL: (https://form-validation-signup.netlify.app/)
 
 ## My process
 

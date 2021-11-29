@@ -24,10 +24,6 @@ Users should be able to:
   - Any `input` field is empty. The message for this error should say _"[Field Name] cannot be empty"_
   - The email address is not formatted correctly (i.e. a correct email address should have this structure: `name@host.tld`). The message for this error should say _"Looks like this is not an email"_
 
-### Screenshot
-
-![SCREENSHOT_Frontend Mentor Intro component with sign up form](./screenshot.jpg)
-
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)

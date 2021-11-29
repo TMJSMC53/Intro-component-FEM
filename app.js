@@ -1,6 +1,4 @@
 const form = document.getElementById("form");
-const emailExample = document.querySelector(".email-example");
-// const emailInput = document.querySelector(".email-input");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -22,14 +20,12 @@ form.addEventListener("submit", (e) => {
   }
   if (email === "") {
     addErrorTo("email", "Looks like this is not an email");
-    emailExample.innerText = "email@example/com";
-    // emailInput.style.opacity = "0";
-    emailExample.style.opacity = "1";
+    document.getElementsByName("email")[0].placeholder = "email@example/com";
   } else if (!isValid(email)) {
     addErrorTo("email", "Looks like this is not an email");
   } else {
     removeErrorMsg("email");
-    // emailExample.innerText = "";
+
     // emailExample.style.opacity = "0";
   }
   if (password === "") {
@@ -45,21 +41,15 @@ function addErrorTo(field, message) {
 
   const errorMsg = formControl.querySelector(".error-msg");
   errorMsg.innerText = message;
-  // const errorMsg = form[field].parentNode.querySelector(".error-msg");
-  // errorMsg.innerText = message;
-  // errorMsg.style.opacity = "1";
-  // const errorIcon = form[field].parentNode.querySelector(".error-icon");
-  // errorIcon.style.opacity = "1";
 }
 
 function removeErrorMsg(field) {
   const formControl = form[field].parentNode;
   formControl.classList.remove("error");
-  // const errorMsg = form[field].parentNode.querySelector(".error-msg");
-  // errorMsg.style.opacity = "0";
-  // emailInput.classList.toggle("success-icon");
-  // const errorIcon = form[field].parentNode.querySelector(".error-icon");
-  // errorIcon.style.opacity = "0";
+
+  const successIcon = form[field].parentNode.querySelector(".success-icon");
+  formControl.classList.toggle("success");
+  successIcon.style.opacity = "1";
 }
 
 function isValid(email) {

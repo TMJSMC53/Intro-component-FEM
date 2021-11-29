@@ -1,3 +1,5 @@
+/* https://www.joshwcomeau.com/css/custom-css-reset/ */
+
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -153,7 +155,7 @@ a {
 .form-control img {
   position: absolute;
   padding: 10px;
-  top: 34%;
+  top: 40%;
   right: 3%;
   transform: translateY(-50%);
   opacity: 0;
@@ -175,12 +177,14 @@ a {
   outline: none;
 }
 
+/* ERROR/SUCCESS MESSAGE */
 .form-control.error input {
-  border-color: hsl(0, 100%, 74%);
+  border: 2px solid hsl(0, 100%, 74%);
   color: hsl(0, 100%, 74%);
 }
 
 .form-control.error input::placeholder {
+  /* color: hsl(0, 100%, 74%); */
   opacity: 0;
 }
 
@@ -201,12 +205,11 @@ a {
   opacity: 1;
 }
 
-/* ERROR MESSAGE */
-
-.email-example {
+.form-control.error .email-example::placeholder {
+  content: "";
   position: absolute;
-  top: 18%;
-  right: 57%;
+  top: 30%;
+  left: 5%;
   color: hsl(0, 100%, 74%);
   font-size: 0.875rem;
   font-weight: 600;
@@ -215,10 +218,19 @@ a {
   opacity: 1;
 }
 
-.success-icon {
+.form-control.success input {
+  opacity: 0;
+}
+
+.form-control.success input {
+  border: 2px solid hsl(154, 59%, 51%);
+  opacity: 1;
+}
+
+.form-control .success-icon {
   position: absolute;
-  top: 50%;
-  right: 10%;
+  top: 53%;
+  right: 9%;
   transform: translate(50%, -50%);
   color: green;
   opacity: 0;
@@ -239,6 +251,13 @@ a {
   letter-spacing: 1px;
   line-height: 26px;
   margin-bottom: 8px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.submit-btn:hover,
+.submit-btn:active {
+  background: hsla(154, 65%, 68%, 1);
 }
 
 .terms__text {
@@ -255,19 +274,26 @@ a {
   color: hsl(0, 100%, 74%);
 }
 
+/* Footer */
+.footer {
+  margin-top: 50px;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
 /* Media Query */
 @media screen and (min-width: 1440px) {
   .container {
     flex-direction: row;
     width: 100%;
     gap: 2.8125rem;
-    /* margin: 0 10.3125rem; */
-    max-width: 1440px;
     padding: 0;
-  }
-
-  main {
-    width: 100%;
   }
 
   .header {
@@ -278,18 +304,16 @@ a {
   }
 
   .header__text {
-    font-size: clamp(1.75rem, 60vw, 3.125rem);
+    width: 525px;
+    font-size: clamp(1.75rem, 5vw, 3.125rem);
     line-height: 55px;
     height: 131px;
     letter-spacing: -0.52px;
     margin-bottom: 0.6875rem;
   }
 
-  .product {
-    margin-top: 121px;
-    margin-bottom: 121px;
-    margin-right: 165px;
-    width: 540px;
+  .header__desc {
+    width: 525px;
   }
 
   .form {
@@ -300,5 +324,13 @@ a {
   .form-control {
     width: 100%;
     margin-bottom: 1.25rem;
+  }
+
+  main,
+  .product,
+  .attribution {
+    width: 100%;
+    max-width: 540px;
+    margin-right: 10.3125rem;
   }
 }

@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot](./screenshot.jpg)
+![SCREENSHOT](SCREENSHOT_Frontend Mentor Intro component with sign up form.jpg)
 
 ### Links
 

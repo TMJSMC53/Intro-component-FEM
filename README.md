@@ -26,12 +26,12 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot](./ SCREENSHOT_Frontend Mentor Intro component with sign up form.jpg)
+![ SCREENSHOT_Frontend Mentor Intro component with sign up form.jpg](./screenshot.jpg)
 
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here]([![Netlify Status](https://api.netlify.com/api/v1/badges/4674f3bc-f71f-4354-9c10-f4dd428fbfe2/deploy-status)](https://app.netlify.com/sites/form-validation-signup/deploys))
 
 ## My process
 
